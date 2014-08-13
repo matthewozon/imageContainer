@@ -56,10 +56,10 @@ vector<string> C_sort_files::getDicomFileName(string dirName)
                 {
                     if(suffix.compare("dcm")==0)
                     {
-                        if(prefix.substr(0,2).compare("IM")==0) //special selection
-                        {
+                        //if(prefix.substr(0,2).compare("IM")==0) //special selection
+                        //{
                             fileNames.push_back(dir->d_name);
-                        }
+                        //}
 
                     }
                 }
