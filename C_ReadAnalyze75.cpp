@@ -297,7 +297,7 @@ rawData<double>* C_ReadAnalyze75::getUnmosaicData(const char* filenameData, unsi
 
 dsr* C_ReadAnalyze75::readAnalyzeInfo(const char* filenameHDR)
 {
-    FILE *f=fopen(filenameHDR,"rb");
+    FILE *f=fopen(getHdrName(filenameHDR).data(),"rb");
     if(f==NULL)
     {
         return (dsr*) NULL;
