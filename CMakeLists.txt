@@ -5,8 +5,8 @@ project(imageContainer)
 set(EXECUTABLE_OUTPUT_PATH bin/${CMAKE_BUILD_TYPE})
 
 #Inclusion de Boost
-include_directories(. /usr/include/gdcm) #make sure this path exists on your machin
-link_directories(.) # /usr/lib64)
+include_directories(. /usr/include/gdcm-2.2) #make sure this path exists on your machin
+link_directories(. /usr/lib) # /usr/lib64)
 
 #Configuration de l'exécutable
 #file(

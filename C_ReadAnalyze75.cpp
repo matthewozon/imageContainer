@@ -314,7 +314,7 @@ dsr* C_ReadAnalyze75::readAnalyzeInfo(const char* filenameHDR)
 	}
 	fseek(f,0,SEEK_SET); //set current possition to the begining of the file
 	dsr* dsrPtr = new dsr[n];//*sizeof(PointWithNeighbors)];
-	fread(dsrPtr,sizeof(dsr),n,f); //read into buffer
+	size_t toto = fread(dsrPtr,sizeof(dsr),n,f); //read into buffer
     fclose(f);
     ///check for a special case
     if(dsrPtr->dime.dim[0]==4)
@@ -389,7 +389,7 @@ char* C_ReadAnalyze75::readAnalyzeData(const char* filenameData, dsr* dsrPtr, lo
 
     //read data
     char* data = new char[n*SIZE_OF_ELTS];
-	fread(data,SIZE_OF_ELTS,n,f); //read into buffer
+	size_t toto = fread(data,SIZE_OF_ELTS,n,f); //read into buffer
 
 	//close file
     fclose(f);
